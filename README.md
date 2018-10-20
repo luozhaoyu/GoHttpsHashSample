@@ -1,9 +1,11 @@
 ## Install
-`brew install go`
-`cd $HOME`
-`git clone`
-`docker-compose up`
-`./test.py` python lib requests is required
+```
+brew install go  # install golang
+cd $HOME
+git clone https://github.com/luozhaoyu/GoHttpsHashSample.git
+docker-compose up
+./test.py  # python lib requests is required
+```
 
 ## TODOs
 * How would your implementation scale if this were a high throughput service, and how could you improve that?
