@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  app:
+    image: golang:1.6.1-alpine
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:$HOME/gocode/src/GoHttpsHash
+    working_dir: $HOME/gocode/src/GoHttpsHash
+    command: go run main.go
+    deploy:
+      restart_policy:
+        condition: on-failure
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
